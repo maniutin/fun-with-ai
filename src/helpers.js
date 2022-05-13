@@ -1,4 +1,4 @@
-export function onGenerateText(data) {
+export function onGenerateText(data, returnedTextSetter) {
   fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
     method: "POST",
     headers: {
@@ -11,7 +11,8 @@ export function onGenerateText(data) {
       return response.json();
     })
     .then((body) => {
-      console.log("=== RES: ", body.choices[0].text);
+      // console.log("=== RES: ", body.choices[0].text);
+      returnedTextSetter(body.choices[0].text);
       return body;
     })
     .catch((error) => console.log(error));

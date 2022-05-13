@@ -7,12 +7,15 @@ import Form from "./Form";
 
 export default function FormContainer() {
   const [inputValue, setInputValue] = useState("");
+  const [returnedText, setReturnedText] = useState("");
+
+  console.log("=== RES: ", returnedText);
 
   const promptData = { ...data, prompt: `${inputValue}` };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onGenerateText(promptData);
+    onGenerateText(promptData, setReturnedText);
   };
 
   return (
