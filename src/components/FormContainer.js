@@ -1,16 +1,19 @@
 import { useState } from "react";
 
+import { data } from "../constants";
+import { onGenerateText } from "../helpers";
+
 import Form from "./Form";
 
 export default function FormContainer() {
   const [inputValue, setInputValue] = useState("");
 
+  const promptData = { ...data, prompt: `${inputValue}` };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${inputValue}`);
+    onGenerateText(promptData);
   };
-
-  console.log("=== VALUE: ", inputValue);
 
   return (
     <div className="form-container">
