@@ -7,6 +7,7 @@ export default function Form(props) {
 
   return (
     <div className="input-form">
+      <h2>Enter prompt:</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="input-field" />
         <textarea
