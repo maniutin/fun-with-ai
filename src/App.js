@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-
-import Form from "./components/Form.js";
+import FormContainer from "./components/FormContainer";
 
 import { data } from "./constants";
 import { onGenerateText } from "./helpers";
@@ -15,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Fun With AI</h1>
-      <Form />
+      <FormContainer />
     </div>
   );
 }
