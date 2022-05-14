@@ -39,6 +39,7 @@ function App() {
         returnedText={returnedText}
         enteredPrompt={enteredPrompt}
         pastPrompts={pastPrompts}
+        setPastPrompts={setPastPrompts}
       />
     </div>
   );
