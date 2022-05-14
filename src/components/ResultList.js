@@ -1,7 +1,7 @@
 import "./ResultList.css";
 
 export default function ResultList(props) {
-  const { returnedText, enteredPrompt, pastPrompts } = props;
+  const { returnedText, enteredPrompt, pastPrompts, clearList } = props;
 
   const allPrompts = pastPrompts.slice(0, 10).map((prompt, index) => (
     <div key={index}>
@@ -22,6 +22,7 @@ export default function ResultList(props) {
 
   return (
     <div className="result-list">
+      <button onClick={clearList}>Clear List</button>
       {pastPrompts.length !== 0 && <h1>Results</h1>}
       {allPrompts}
     </div>

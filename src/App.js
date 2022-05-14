@@ -9,7 +9,11 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [enteredPrompt, setEnteredPrompt] = useState("");
   const [returnedText, setReturnedText] = useState("");
-  const [pastPrompts, setPastPrompts] = useState([]);
+  const [pastPrompts, setPastPrompts] = useState(() => {
+    const saved = localStorage.getItem("recent-prompts");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
 
   useEffect(() => {
     let promptsArr = [...pastPrompts];
@@ -35,6 +39,7 @@ function App() {
         returnedText={returnedText}
         enteredPrompt={enteredPrompt}
         pastPrompts={pastPrompts}
+        setPastPrompts={setPastPrompts}
       />
     </div>
   );
