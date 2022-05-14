@@ -1,21 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { data } from "../constants";
 import { onGenerateText } from "../helpers";
 
 import Form from "./Form";
 
-export default function FormContainer() {
-  const [inputValue, setInputValue] = useState("");
-  const [returnedText, setReturnedText] = useState("");
-
-  console.log("=== RES: ", returnedText);
+export default function FormContainer(props) {
+  const {
+    inputValue,
+    setInputValue,
+    returnedText,
+    setReturnedText,
+    enteredPrompt,
+    setEnteredPrompt,
+  } = props;
 
   const promptData = { ...data, prompt: `${inputValue}` };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onGenerateText(promptData, setReturnedText);
+    setEnteredPrompt(inputValue);
   };
 
   return (

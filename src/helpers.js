@@ -11,7 +11,6 @@ export function onGenerateText(data, returnedTextSetter) {
       return response.json();
     })
     .then((body) => {
-      // console.log("=== RES: ", body.choices[0].text);
       returnedTextSetter(body.choices[0].text);
       return body;
     })
