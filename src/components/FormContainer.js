@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { data } from "../constants";
 import { onGenerateText } from "../helpers";

@@ -17,6 +17,7 @@ export default function Form(props) {
           cols="50"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          required
         >
           At w3schools.com you will learn how to make a website. They offer free
           tutorials in all web development technologies.

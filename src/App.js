@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import FormContainer from "./components/FormContainer";
 import ResultListContainer from "./components/ResultListContainer";
@@ -9,6 +9,15 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [enteredPrompt, setEnteredPrompt] = useState("");
   const [returnedText, setReturnedText] = useState("");
+  const [pastPrompts, setPastPrompts] = useState([]);
+
+  useEffect(() => {
+    let promptsArr = [...pastPrompts];
+    if (enteredPrompt && returnedText) {
+      promptsArr.unshift({ enteredPrompt, returnedText });
+      setPastPrompts(promptsArr);
+    }
+  }, [returnedText]);
 
   return (
     <div className="App">
@@ -25,6 +34,7 @@ function App() {
         inputValue={inputValue}
         returnedText={returnedText}
         enteredPrompt={enteredPrompt}
+        pastPrompts={pastPrompts}
       />
     </div>
   );

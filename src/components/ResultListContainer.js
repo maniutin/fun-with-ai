@@ -1,14 +1,14 @@
 import ResultList from "./ResultList";
 
 export default function ResultListContainer(props) {
-  const { inputValue, returnedText, enteredPrompt } = props;
+  const { returnedText, enteredPrompt, pastPrompts } = props;
 
   return (
     <div className="result-list">
       <ResultList
-        inputValue={inputValue}
         returnedText={returnedText}
         enteredPrompt={enteredPrompt}
+        pastPrompts={pastPrompts}
       />
     </div>
   );

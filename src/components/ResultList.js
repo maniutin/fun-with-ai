@@ -1,23 +1,29 @@
 import "./ResultList.css";
 
 export default function ResultList(props) {
-  const { inputValue, returnedText, enteredPrompt } = props;
+  const { returnedText, enteredPrompt, pastPrompts } = props;
 
-  return (
-    <div className="result-list">
-      <h1>Results</h1>
+  const allPrompts = pastPrompts.slice(0, 10).map((prompt, index) => (
+    <div key={index}>
       <table>
         <tbody>
           <tr>
             <td>Prompt:</td>
-            <td>{enteredPrompt}</td>
+            <td>{prompt.enteredPrompt}</td>
           </tr>
           <tr>
             <td>Result:</td>
-            <td>{returnedText}</td>
+            <td>{prompt.returnedText}</td>
           </tr>
         </tbody>
       </table>
+    </div>
+  ));
+
+  return (
+    <div className="result-list">
+      {pastPrompts.length !== 0 && <h1>Results</h1>}
+      {allPrompts}
     </div>
   );
 }
