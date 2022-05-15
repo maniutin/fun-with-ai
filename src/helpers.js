@@ -1,4 +1,4 @@
-export function onGenerateText(data, returnedTextSetter) {
+export function onGenerateText(data, returnedTextSetter, isSubmittingSetter) {
   fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
     method: "POST",
     headers: {
@@ -12,6 +12,7 @@ export function onGenerateText(data, returnedTextSetter) {
     })
     .then((body) => {
       returnedTextSetter(body.choices[0].text);
+      isSubmittingSetter(false);
       return body;
     })
     .catch((error) => console.log(error));
