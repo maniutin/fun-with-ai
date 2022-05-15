@@ -25,8 +25,10 @@ function App() {
   }, [returnedText]);
 
   return (
-    <div className="App">
-      <h1 id="app-title">Fun With AI</h1>
+    <main className="App">
+      <header>
+        <h1 id="app-title">Fun With AI</h1>
+      </header>
       <FormContainer
         inputValue={inputValue}
         setInputValue={setInputValue}
@@ -45,7 +47,7 @@ function App() {
         pastPrompts={pastPrompts}
         setPastPrompts={setPastPrompts}
       />
-    </div>
+    </main>
   );
 }
 

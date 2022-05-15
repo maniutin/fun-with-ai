@@ -13,29 +13,37 @@ export default function ResultList(props) {
 
   // change slice end value to display more recent prompts
   const promptEntry = pastPrompts.slice(0, 10).map((prompt, index) => (
-    <div key={index} className="prompt-entry">
+    <article key={index} className="prompt-entry">
       <table id="results-table">
         <tbody>
-          <tr className="prompt">
-            <th>Prompt:</th>
+          <tr className="entered-prompt">
+            <th scope="row">Prompt:</th>
             <td>{prompt.enteredPrompt}</td>
           </tr>
           <tr className="result">
-            <th>Result:</th>
+            <th scope="row">Result:</th>
             <td>{prompt.returnedText}</td>
           </tr>
         </tbody>
       </table>
-    </div>
+    </article>
   ));
 
   return (
-    <div className="result-list">
+    <section className="result-list">
       <div className="result-list-top">
-        {pastPrompts.length !== 0 && <h1>Results</h1>}
+        {pastPrompts.length !== 0 && (
+          <caption>
+            <h2>Results</h2>
+          </caption>
+        )}
 
         {!beingCleared && pastPrompts.length !== 0 && (
-          <button id="clear-list-button" onClick={clearListConfirmation}>
+          <button
+            id="clear-list-button"
+            onClick={clearListConfirmation}
+            aria-labelledby="clear-list"
+          >
             Clear List
           </button>
         )}
@@ -43,12 +51,17 @@ export default function ResultList(props) {
         {beingCleared && (
           <div className="clear-list-confirmation">
             <p id="confirmation-prompt">Are you sure?</p>
-            <button id="confirm-clear-list-button" onClick={clearList}>
+            <button
+              id="confirm-clear-list-button"
+              onClick={clearList}
+              aria-labelledby="confirm-clear-list"
+            >
               Clear
             </button>
             <button
               id="cancel-clear-list-button"
               onClick={() => setBeingCleared(false)}
+              aria-labelledby="cancel-clear-list"
             >
               Cancel
             </button>
@@ -57,6 +70,6 @@ export default function ResultList(props) {
       </div>
 
       <div className="recent-prompts">{promptEntry}</div>
-    </div>
+    </section>
   );
 }

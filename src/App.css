@@ -4,13 +4,19 @@
 
 #app-title {
   font-family: "Koulen", sans-serif;
-  font-size: 5rem;
+  font-size: 7rem;
   margin: 0;
   animation: fadeIn 2s;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -o-animation: fadeIn 2s;
   -ms-animation: fadeIn 2s;
+}
+
+@media only screen and (max-width: 576px) {
+  #app-title {
+    font-size: 5rem;
+  }
 }
 
 @keyframes fadeIn {
