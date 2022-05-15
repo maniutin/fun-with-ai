@@ -1,14 +1,13 @@
-import { useState } from "react";
-
 import "./Form.css";
 
 export default function Form(props) {
   const {
+    isSubmitting,
+    submitButtonLabel,
+    formPlaceholder,
     inputValue,
     setInputValue,
     handleSubmit,
-    isSubmitting,
-    submitButtonLabel,
   } = props;
 
   return (
@@ -18,12 +17,11 @@ export default function Form(props) {
         <textarea
           id="input-field"
           name="input-field"
-          placeholder="Enter prompt (e.g. 'Write a poem about bananas'):"
+          placeholder={formPlaceholder}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           required
         />
-
         <button
           type="submit"
           className={`${
