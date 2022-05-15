@@ -8,6 +8,17 @@
   font-size: 15px;
 }
 
+.input-form {
+  display: flex;
+  justify-content: center;
+}
+
+.input-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
 .input-form input {
   border: none;
   background-color: black;

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import ResultList from "./ResultList";
 
+import "./ResultListContainer.css";
+
 export default function ResultListContainer(props) {
   const { returnedText, enteredPrompt, pastPrompts, setPastPrompts } = props;
 
@@ -22,7 +24,7 @@ export default function ResultListContainer(props) {
   };
 
   return (
-    <div className="result-list">
+    <div className="result-list-container">
       <ResultList
         returnedText={returnedText}
         enteredPrompt={enteredPrompt}
