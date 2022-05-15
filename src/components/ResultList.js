@@ -12,15 +12,15 @@ export default function ResultList(props) {
   } = props;
 
   const allPrompts = pastPrompts.slice(0, 10).map((prompt, index) => (
-    <div key={index}>
-      <table>
+    <div key={index} className="all-prompts">
+      <table id="results-table">
         <tbody>
-          <tr>
-            <td>Prompt:</td>
+          <tr className="prompt">
+            <th>Prompt:</th>
             <td>{prompt.enteredPrompt}</td>
           </tr>
-          <tr>
-            <td>Result:</td>
+          <tr className="result">
+            <th>Result:</th>
             <td>{prompt.returnedText}</td>
           </tr>
         </tbody>
@@ -30,17 +30,28 @@ export default function ResultList(props) {
 
   return (
     <div className="result-list">
-      {!beingCleared && (
-        <button onClick={clearListConfirmation}>Clear List</button>
-      )}
-      {beingCleared && (
-        <div>
-          <p>Are you sure?</p>
-          <button onClick={clearList}>Clear</button>
-          <button onClick={() => setBeingCleared(false)}>Cancel</button>
-        </div>
-      )}
-      {pastPrompts.length !== 0 && <h1>Results</h1>}
+      <div className="result-list-top">
+        {pastPrompts.length !== 0 && <h1>Results</h1>}
+        {!beingCleared && (
+          <button id="clear-list-button" onClick={clearListConfirmation}>
+            Clear List
+          </button>
+        )}
+        {beingCleared && (
+          <div className="clear-list-confirmation">
+            <p id="confirmation-prompt">Are you sure?</p>
+            <button id="confirm-clear-list-button" onClick={clearList}>
+              Clear
+            </button>
+            <button
+              id="cancel-clear-list-button"
+              onClick={() => setBeingCleared(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        )}
+      </div>
       {allPrompts}
     </div>
   );

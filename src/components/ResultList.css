@@ -1,0 +1,70 @@
+.result-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+}
+
+.result-list-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60vw;
+}
+
+#clear-list-button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+#clear-list-button:hover,
+.clear-list-confirmation button:hover {
+  opacity: 0.7;
+}
+
+.clear-list-confirmation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.clear-list-confirmation button {
+  transition: 0.3s;
+}
+
+#confirmation-prompt {
+  font-size: 16px;
+}
+
+#confirm-clear-list-button {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+#cancel-clear-list-button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  color: #e42828;
+  font-size: 16px;
+}
+
+#results-table {
+  text-align: left;
+  background-color: #e7e9eb;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 60vw;
+}
+
+#results-table th {
+  padding-right: 2rem;
+  vertical-align: top;
+}
