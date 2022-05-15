@@ -17,7 +17,7 @@ export default function Form(props) {
           onChange={(e) => setInputValue(e.target.value)}
           required
         />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" id="submit-button" />
       </form>
     </div>
   );

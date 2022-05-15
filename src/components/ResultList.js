@@ -12,15 +12,15 @@ export default function ResultList(props) {
   } = props;
 
   const allPrompts = pastPrompts.slice(0, 10).map((prompt, index) => (
-    <div key={index}>
-      <table>
+    <div key={index} className="all-prompts">
+      <table id="results-table">
         <tbody>
-          <tr>
-            <td>Prompt:</td>
+          <tr className="prompt">
+            <th>Prompt:</th>
             <td>{prompt.enteredPrompt}</td>
           </tr>
-          <tr>
-            <td>Result:</td>
+          <tr className="result">
+            <th>Result:</th>
             <td>{prompt.returnedText}</td>
           </tr>
         </tbody>
@@ -39,7 +39,7 @@ export default function ResultList(props) {
         )}
         {beingCleared && (
           <div className="clear-list-confirmation">
-            <p>Are you sure?</p>
+            <p id="confirmation-prompt">Are you sure?</p>
             <button id="confirm-clear-list-button" onClick={clearList}>
               Clear
             </button>

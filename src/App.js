@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Fun With AI</h1>
+      <h1 id="app-title">Fun With AI</h1>
       <FormContainer
         inputValue={inputValue}
         setInputValue={setInputValue}
