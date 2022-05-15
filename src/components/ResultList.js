@@ -33,9 +33,9 @@ export default function ResultList(props) {
     <section className="result-list">
       <div className="result-list-top">
         {pastPrompts.length !== 0 && (
-          <caption>
+          <div>
             <h2>Results</h2>
-          </caption>
+          </div>
         )}
 
         {!beingCleared && pastPrompts.length !== 0 && (
