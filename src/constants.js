@@ -27,3 +27,9 @@ export const clearListButtonText = {
   cancel: "Cancel",
   confirmation: "Are you sure?",
 };
+
+export const promptPresets = {
+  keys: "Write a song about keys",
+  bees: "Write a poem about bees",
+  seas: "Write something about seas",
+};
