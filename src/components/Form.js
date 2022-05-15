@@ -12,12 +12,15 @@ export default function Form(props) {
         <textarea
           id="input-field"
           name="input-field"
-          placeholder="Enter prompt:"
+          placeholder="Enter prompt (e.g. 'Write a poem about bananas'):"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           required
         />
-        <input type="submit" value="Submit" id="submit-button" />
+
+        <button type="submit" id="submit-button">
+          Submit
+        </button>
       </form>
     </div>
   );

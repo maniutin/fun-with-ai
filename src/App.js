@@ -9,6 +9,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [enteredPrompt, setEnteredPrompt] = useState("");
   const [returnedText, setReturnedText] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [pastPrompts, setPastPrompts] = useState(() => {
     const saved = localStorage.getItem("recent-prompts");
     const initialValue = JSON.parse(saved);
@@ -33,7 +34,9 @@ function App() {
         setReturnedText={setReturnedText}
         enteredPrompt={enteredPrompt}
         setEnteredPrompt={setEnteredPrompt}
+        setIsSubmitting={setIsSubmitting}
       />
+      {isSubmitting && <div>Loading, bitch...</div>}
       <ResultListContainer
         inputValue={inputValue}
         returnedText={returnedText}

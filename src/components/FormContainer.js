@@ -13,13 +13,15 @@ export default function FormContainer(props) {
     setReturnedText,
     enteredPrompt,
     setEnteredPrompt,
+    setIsSubmitting,
   } = props;
 
   const promptData = { ...data, prompt: `${inputValue}` };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onGenerateText(promptData, setReturnedText);
+    setIsSubmitting(true);
+    onGenerateText(promptData, setReturnedText, setIsSubmitting);
     setEnteredPrompt(inputValue);
   };
 

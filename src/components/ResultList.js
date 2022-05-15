@@ -11,8 +11,9 @@ export default function ResultList(props) {
     clearListConfirmation,
   } = props;
 
-  const allPrompts = pastPrompts.slice(0, 10).map((prompt, index) => (
-    <div key={index} className="all-prompts">
+  // change slice end value to display more recent prompts
+  const promptEntry = pastPrompts.slice(0, 10).map((prompt, index) => (
+    <div key={index} className="prompt-entry">
       <table id="results-table">
         <tbody>
           <tr className="prompt">
@@ -52,7 +53,7 @@ export default function ResultList(props) {
           </div>
         )}
       </div>
-      {allPrompts}
+      <div className="recent-prompts">{promptEntry}</div>
     </div>
   );
 }
