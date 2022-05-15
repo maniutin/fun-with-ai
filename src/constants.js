@@ -16,6 +16,7 @@ export const formPlaceholder = "Enter prompt or try one below:";
 
 export const resultsListTableText = {
   name: "Results:",
+  howMany: "(Last 10)",
   prompt: "Prompt:",
   result: "Result:",
 };

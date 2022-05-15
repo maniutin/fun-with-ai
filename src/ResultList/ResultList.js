@@ -36,6 +36,7 @@ export default function ResultList(props) {
         {pastPrompts.length !== 0 && (
           <div>
             <h2>{resultsListTableText.name}</h2>
+            <p className="prompt-qty">{resultsListTableText.howMany}</p>
           </div>
         )}
 

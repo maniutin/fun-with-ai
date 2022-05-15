@@ -13,6 +13,16 @@
   width: 60vw;
 }
 
+.result-list-top h2 {
+  margin-bottom: 0;
+}
+
+.prompt-qty {
+  margin-top: 0;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
 #clear-list-button {
   border: none;
   background-color: transparent;
