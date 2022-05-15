@@ -7,14 +7,23 @@ export default function PromptPresets(props) {
 
   return (
     <section className="prompt-presets">
-      <div>Try:</div>
-      <button onClick={() => handleClick(promptPresets.keys)}>
+      <header>Try:</header>
+      <button
+        className="prompt-preset-button"
+        onClick={() => handleClick(promptPresets.keys)}
+      >
         {promptPresets.keys}
       </button>
-      <button onClick={() => handleClick(promptPresets.bees)}>
+      <button
+        className="prompt-preset-button"
+        onClick={() => handleClick(promptPresets.bees)}
+      >
         {promptPresets.bees}
       </button>
-      <button onClick={() => handleClick(promptPresets.seas)}>
+      <button
+        className="prompt-preset-button"
+        onClick={() => handleClick(promptPresets.seas)}
+      >
         {promptPresets.seas}
       </button>
     </section>

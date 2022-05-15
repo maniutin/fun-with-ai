@@ -1,0 +1,35 @@
+.prompt-presets {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.prompt-presets header {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.prompt-preset-button {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.prompt-preset-button:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 576px) {
+  .prompt-presets {
+    flex-direction: column;
+  }
+
+  .prompt-preset-button {
+    margin-bottom: 0.5rem;
+  }
+}
