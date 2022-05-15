@@ -1,0 +1,26 @@
+#input-field {
+  border: 2px solid black;
+  width: 50vw;
+  height: 25vh;
+}
+
+#input-field::placeholder {
+  font-size: 15px;
+}
+
+.input-form input {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  width: 10rem;
+  font-size: 20px;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+
+.input-form input:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
