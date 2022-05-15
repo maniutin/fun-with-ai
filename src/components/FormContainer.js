@@ -13,6 +13,7 @@ export default function FormContainer(props) {
     setReturnedText,
     enteredPrompt,
     setEnteredPrompt,
+    isSubmitting,
     setIsSubmitting,
   } = props;
 
@@ -31,6 +32,7 @@ export default function FormContainer(props) {
         inputValue={inputValue}
         setInputValue={setInputValue}
         handleSubmit={handleSubmit}
+        isSubmitting={isSubmitting}
       />
     </div>
   );
