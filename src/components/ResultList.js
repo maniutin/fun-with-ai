@@ -33,11 +33,13 @@ export default function ResultList(props) {
     <div className="result-list">
       <div className="result-list-top">
         {pastPrompts.length !== 0 && <h1>Results</h1>}
-        {!beingCleared && (
+
+        {!beingCleared && pastPrompts.length !== 0 && (
           <button id="clear-list-button" onClick={clearListConfirmation}>
             Clear List
           </button>
         )}
+
         {beingCleared && (
           <div className="clear-list-confirmation">
             <p id="confirmation-prompt">Are you sure?</p>
@@ -53,6 +55,7 @@ export default function ResultList(props) {
           </div>
         )}
       </div>
+
       <div className="recent-prompts">{promptEntry}</div>
     </div>
   );
