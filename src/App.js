@@ -34,9 +34,10 @@ function App() {
         setReturnedText={setReturnedText}
         enteredPrompt={enteredPrompt}
         setEnteredPrompt={setEnteredPrompt}
+        isSubmitting={isSubmitting}
         setIsSubmitting={setIsSubmitting}
       />
-      {isSubmitting && <div>Loading, bitch...</div>}
+
       <ResultListContainer
         inputValue={inputValue}
         returnedText={returnedText}
