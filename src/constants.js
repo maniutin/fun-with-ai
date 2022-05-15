@@ -12,8 +12,7 @@ export const submitButtonText = {
   submitting: "Submitting...",
 };
 
-export const formPlaceholder =
-  "Enter prompt (e.g. 'Write a poem about bananas'):";
+export const formPlaceholder = "Enter prompt or try one below:";
 
 export const resultsListTableText = {
   name: "Results:",
@@ -31,5 +30,5 @@ export const clearListButtonText = {
 export const promptPresets = {
   keys: "Write a song about keys",
   bees: "Write a poem about bees",
-  seas: "Write something about seas",
+  seas: "Write something about peas",
 };

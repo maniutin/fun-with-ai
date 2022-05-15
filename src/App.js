@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import FormContainer from "./components/FormContainer";
-import PromptPresetsContainer from "./components/PromptPresetsContainer";
-import ResultListContainer from "./components/ResultListContainer";
+import FormContainer from "./Form/FormContainer";
+import PromptPresetsContainer from "./PromptPresets/PromptPresetsContainer";
+import ResultListContainer from "./ResultList/ResultListContainer";
 
 import "./App.css";
 
