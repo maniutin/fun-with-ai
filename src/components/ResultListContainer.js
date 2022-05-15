@@ -5,7 +5,7 @@ import ResultList from "./ResultList";
 import "./ResultListContainer.css";
 
 export default function ResultListContainer(props) {
-  const { returnedText, enteredPrompt, pastPrompts, setPastPrompts } = props;
+  const { pastPrompts, setPastPrompts } = props;
 
   const [beingCleared, setBeingCleared] = useState(false);
 
@@ -26,8 +26,6 @@ export default function ResultListContainer(props) {
   return (
     <div className="result-list-container">
       <ResultList
-        returnedText={returnedText}
-        enteredPrompt={enteredPrompt}
         pastPrompts={pastPrompts}
         clearList={clearList}
         beingCleared={beingCleared}

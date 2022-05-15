@@ -30,20 +30,15 @@ function App() {
         <h1 id="app-title">Fun With AI</h1>
       </header>
       <FormContainer
+        isSubmitting={isSubmitting}
         inputValue={inputValue}
         setInputValue={setInputValue}
-        returnedText={returnedText}
         setReturnedText={setReturnedText}
-        enteredPrompt={enteredPrompt}
         setEnteredPrompt={setEnteredPrompt}
-        isSubmitting={isSubmitting}
         setIsSubmitting={setIsSubmitting}
       />
 
       <ResultListContainer
-        inputValue={inputValue}
-        returnedText={returnedText}
-        enteredPrompt={enteredPrompt}
         pastPrompts={pastPrompts}
         setPastPrompts={setPastPrompts}
       />

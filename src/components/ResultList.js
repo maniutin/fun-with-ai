@@ -1,9 +1,10 @@
+import { resultsListTableText } from "../constants";
+import { clearListButtonText } from "../constants";
+
 import "./ResultList.css";
 
 export default function ResultList(props) {
   const {
-    returnedText,
-    enteredPrompt,
     pastPrompts,
     clearList,
     beingCleared,
@@ -17,11 +18,11 @@ export default function ResultList(props) {
       <table id="results-table">
         <tbody>
           <tr className="entered-prompt">
-            <th scope="row">Prompt:</th>
+            <th scope="row">{resultsListTableText.prompt}</th>
             <td>{prompt.enteredPrompt}</td>
           </tr>
           <tr className="result">
-            <th scope="row">Result:</th>
+            <th scope="row">{resultsListTableText.result}</th>
             <td>{prompt.returnedText}</td>
           </tr>
         </tbody>
@@ -34,7 +35,7 @@ export default function ResultList(props) {
       <div className="result-list-top">
         {pastPrompts.length !== 0 && (
           <div>
-            <h2>Results</h2>
+            <h2>{resultsListTableText.name}</h2>
           </div>
         )}
 
@@ -44,26 +45,26 @@ export default function ResultList(props) {
             onClick={clearListConfirmation}
             aria-labelledby="clear-list"
           >
-            Clear List
+            {clearListButtonText.clearList}
           </button>
         )}
 
         {beingCleared && (
           <div className="clear-list-confirmation">
-            <p id="confirmation-prompt">Are you sure?</p>
+            <p id="confirmation-prompt">{clearListButtonText.confirmation}</p>
             <button
               id="confirm-clear-list-button"
               onClick={clearList}
               aria-labelledby="confirm-clear-list"
             >
-              Clear
+              {clearListButtonText.clear}
             </button>
             <button
               id="cancel-clear-list-button"
               onClick={() => setBeingCleared(false)}
               aria-labelledby="cancel-clear-list"
             >
-              Cancel
+              {clearListButtonText.cancel}
             </button>
           </div>
         )}

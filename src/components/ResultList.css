@@ -41,7 +41,8 @@
   font-size: 16px;
 }
 
-#confirm-clear-list-button {
+#confirm-clear-list-button,
+#cancel-clear-list-button {
   border: none;
   background: transparent;
   text-decoration: underline;
@@ -49,11 +50,7 @@
 }
 
 #cancel-clear-list-button {
-  border: none;
-  background-color: transparent;
-  text-decoration: underline;
   color: #e42828;
-  font-size: 16px;
 }
 
 #results-table {
@@ -69,9 +66,9 @@
   vertical-align: top;
 }
 
-/* .prompt-entry:first-child #results-table {
+.prompt-entry:first-child #results-table {
   border: 1px solid black;
-} */
+}
 
 @media only screen and (max-width: 576px) {
   .result-list,
