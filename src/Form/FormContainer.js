@@ -27,6 +27,7 @@ export default function FormContainer(props) {
     setIsSubmitting(true);
     onGenerateText(promptData, setReturnedText, setIsSubmitting);
     setEnteredPrompt(inputValue);
+    setInputValue("");
   };
 
   return (

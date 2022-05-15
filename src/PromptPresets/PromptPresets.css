@@ -24,7 +24,7 @@
   opacity: 0.7;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 700px) {
   .prompt-presets {
     flex-direction: column;
   }
