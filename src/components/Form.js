@@ -6,8 +6,8 @@ export default function Form(props) {
   const { inputValue, setInputValue, handleSubmit, isSubmitting } = props;
 
   return (
-    <div className="input-form">
-      <form onSubmit={handleSubmit}>
+    <section className="input-form">
+      <form onSubmit={handleSubmit} aria-label="input-form">
         <label htmlFor="input-field" />
         <textarea
           id="input-field"
@@ -22,11 +22,11 @@ export default function Form(props) {
             Submitting...
           </button>
         ) : (
-          <button type="submit" id="submit-button">
+          <button type="submit" id="submit-button" aria-label="submit-prompt">
             Submit
           </button>
         )}
       </form>
-    </div>
+    </section>
   );
 }
