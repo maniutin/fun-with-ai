@@ -3,12 +3,7 @@ import { promptPresets } from "../constants";
 import "./PromptPresets.css";
 
 export default function PromptPresets(props) {
-  const { setInputValue } = props;
-
-  const handleClick = (value) => {
-    // event.preventDefault();
-    setInputValue(value);
-  };
+  const { handleClick } = props;
 
   return (
     <section className="prompt-presets">

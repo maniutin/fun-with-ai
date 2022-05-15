@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import FormContainer from "./components/FormContainer";
-import PromptPresets from "./components/PromptPresets";
+import PromptPresetsContainer from "./components/PromptPresetsContainer";
 import ResultListContainer from "./components/ResultListContainer";
 
 import "./App.css";
@@ -39,7 +39,7 @@ function App() {
         setIsSubmitting={setIsSubmitting}
       />
 
-      <PromptPresets setInputValue={setInputValue} />
+      <PromptPresetsContainer setInputValue={setInputValue} />
 
       <ResultListContainer
         pastPrompts={pastPrompts}
