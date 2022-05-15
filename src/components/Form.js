@@ -3,7 +3,13 @@ import { useState } from "react";
 import "./Form.css";
 
 export default function Form(props) {
-  const { inputValue, setInputValue, handleSubmit, isSubmitting } = props;
+  const {
+    inputValue,
+    setInputValue,
+    handleSubmit,
+    isSubmitting,
+    submitButtonLabel,
+  } = props;
 
   return (
     <section className="input-form">
@@ -17,15 +23,16 @@ export default function Form(props) {
           onChange={(e) => setInputValue(e.target.value)}
           required
         />
-        {isSubmitting ? (
-          <button type="submit" id="loading-button" disabled>
-            Submitting...
-          </button>
-        ) : (
-          <button type="submit" id="submit-button" aria-label="submit-prompt">
-            Submit
-          </button>
-        )}
+
+        <button
+          type="submit"
+          className={`${
+            isSubmitting ? "submit-button--loading" : "submit-button"
+          }`}
+          disabled={isSubmitting}
+        >
+          {submitButtonLabel}
+        </button>
       </form>
     </section>
   );

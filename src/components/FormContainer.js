@@ -19,6 +19,8 @@ export default function FormContainer(props) {
 
   const promptData = { ...data, prompt: `${inputValue}` };
 
+  const submitButtonLabel = isSubmitting ? "Submitting..." : "Submit";
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsSubmitting(true);
@@ -29,10 +31,11 @@ export default function FormContainer(props) {
   return (
     <div className="form-container">
       <Form
+        isSubmitting={isSubmitting}
+        submitButtonLabel={submitButtonLabel}
         inputValue={inputValue}
         setInputValue={setInputValue}
         handleSubmit={handleSubmit}
-        isSubmitting={isSubmitting}
       />
     </div>
   );
