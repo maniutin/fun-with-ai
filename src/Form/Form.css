@@ -19,7 +19,8 @@
 }
 
 #input-field label {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
 }
 
 #input-field::placeholder {
