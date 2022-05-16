@@ -16,9 +16,13 @@
 3. Wait for it...
 4. Get a response from AI!
 
-**Tip: to get better results, try to be specific e.g. "Write a poem about trees".**
+**Tip: to get better results, try to be more specific e.g. "Write a poem about trees".**
 
 Note: The project currently displays only last 10 prompts. To display more, navigate to `ResultList.js` and simply change the `end` parameter inside `slice()`. The reasoning behind this limitation is to prevent the list from getting too long. Adding pagination would be the first major improvement.
+
+### Screenshots
+
+!["Screenshot of Main Interface"](https://github.com/sbarchshevskiy/Orca/blob/master/docs/Collaboration.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
