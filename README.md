@@ -22,7 +22,7 @@ Note: The project currently displays only last 10 prompts. To display more, navi
 
 ### Screenshots
 
-!["Screenshot of Main Interface"](https://github.com/sbarchshevskiy/Orca/blob/master/docs/Collaboration.png?raw=true)
+!["Screenshot of Main Interface"](https://github.com/maniutin/fun-with-ai/blob/main/docs/Main%20Interface.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
