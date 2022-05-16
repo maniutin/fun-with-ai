@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Fun With AI
+
+## Walkthrough
+
+### Installation
+
+1. Clone the repo.
+2. Run `npm install`
+3. Run `npm start`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### Using the app
+
+1. Enter text prompt.
+2. Hit the Submit button.
+3. Wait for it...
+4. Get a response from AI!
+
+** Tip: to get better results, try to be specific e.g. "Write a poem about trees". **
+
+Note: The project currently displays only last 10 prompts. To display more, navigate to `ResultList.js` and simply change the `end` parameter inside `slice()`. The reasoning behind this limitation is to prevent the list from getting too long. Adding pagination would be the first major improvement.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,4 +88,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # fun-with-ai
