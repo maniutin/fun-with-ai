@@ -3,6 +3,7 @@ import "./Form.css";
 export default function Form(props) {
   const {
     isSubmitting,
+    formLabel,
     submitButtonLabel,
     formPlaceholder,
     inputValue,
@@ -13,7 +14,9 @@ export default function Form(props) {
   return (
     <section className="input-form">
       <form onSubmit={handleSubmit} aria-label="input-form">
-        <label htmlFor="input-field">Enter Prompt</label>
+        <div className="form-label">
+          <label htmlFor="input-field">{formLabel}</label>
+        </div>
         <textarea
           id="input-field"
           name="input-field"

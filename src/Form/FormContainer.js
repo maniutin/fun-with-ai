@@ -1,6 +1,7 @@
 import { data } from "../constants";
 import { submitButtonText } from "../constants";
 import { formPlaceholder } from "../constants";
+import { formLabel } from "../constants";
 
 import { onGenerateText } from "../helpers";
 
@@ -34,6 +35,7 @@ export default function FormContainer(props) {
     <div className="form-container">
       <Form
         isSubmitting={isSubmitting}
+        formLabel={formLabel}
         submitButtonLabel={submitButtonLabel}
         formPlaceholder={formPlaceholder}
         inputValue={inputValue}

@@ -18,8 +18,11 @@
   resize: none;
 }
 
-.input-form label {
-  color: transparent;
+.form-label {
+  display: flex;
+  justify-content: flex-start;
+  width: 60.5vw;
+  font-weight: bold;
 }
 
 #input-field::placeholder {
@@ -55,6 +58,10 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .form-label {
+    width: 75.5vw;
+  }
+
   .input-form form {
     align-items: center;
   }
