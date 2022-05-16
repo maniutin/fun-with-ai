@@ -13,7 +13,7 @@ export default function Form(props) {
   return (
     <section className="input-form">
       <form onSubmit={handleSubmit} aria-label="input-form">
-        <label htmlFor="input-field" />
+        <label htmlFor="input-field">Enter Prompt</label>
         <textarea
           id="input-field"
           name="input-field"
