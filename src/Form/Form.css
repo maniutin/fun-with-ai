@@ -18,6 +18,10 @@
   resize: none;
 }
 
+#input-field label {
+  visibility: hidden;
+}
+
 #input-field::placeholder {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
