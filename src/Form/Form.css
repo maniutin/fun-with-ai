@@ -18,8 +18,7 @@
   resize: none;
 }
 
-#input-field label {
-  /* visibility: hidden; */
+.input-form label {
   display: none;
 }
 
