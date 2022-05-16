@@ -12,7 +12,7 @@ export const submitButtonText = {
   submitting: "Submitting...",
 };
 
-export const formPlaceholder = "Enter prompt or try one below:";
+export const formPlaceholder = "Enter prompt or try one below";
 
 export const resultsListTableText = {
   name: "Results:",
