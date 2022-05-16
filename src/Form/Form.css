@@ -19,7 +19,7 @@
 }
 
 .input-form label {
-  visibility: hidden;
+  color: transparent;
 }
 
 #input-field::placeholder {
