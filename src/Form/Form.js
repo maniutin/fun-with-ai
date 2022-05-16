@@ -13,16 +13,15 @@ export default function Form(props) {
   return (
     <section className="input-form">
       <form onSubmit={handleSubmit} aria-label="input-form">
-        <label htmlFor="input-field">
-          <textarea
-            id="input-field"
-            name="input-field"
-            placeholder={formPlaceholder}
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            required
-          />
-        </label>
+        <label for="input-field" />
+        <textarea
+          id="input-field"
+          name="input-field"
+          placeholder={formPlaceholder}
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          required
+        />
         <button
           type="submit"
           className={`${
