@@ -23,6 +23,7 @@ Note: The project currently displays only last 10 prompts. To display more, navi
 ### Screenshots
 
 !["Screenshot of Main Interface"](https://github.com/maniutin/fun-with-ai/blob/main/docs/Main%20Interface.png?raw=true)
+!["Screenshot of Accessibility Report"](https://github.com/maniutin/fun-with-ai/blob/main/docs/Accessibility%20Report.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
