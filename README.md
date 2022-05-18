@@ -17,6 +17,8 @@
 4. Get a response from AI!
 
 **Tip: to get better results, try to be more specific e.g. "Write a poem about trees".**
+Most recent prompts appear in a list sorted from newest to oldest. To clear the list just hit the "Clear List" button. 
+The prompts are stored in Local Storage so your browser will retain the list if you refresh the page or close the tab. "Clear List" button clears Local Storage as well.
 
 Note: The project currently displays only last 10 prompts. To display more, navigate to `ResultList.js` and simply change the `end` parameter inside `slice()`. The reasoning behind this limitation is to prevent the list from getting too long. Adding pagination would be the first major improvement.
 
