@@ -17,6 +17,7 @@
 4. Get a response from AI!
 
 **Tip: to get better results, try to be more specific e.g. "Write a poem about trees".**
+
 Most recent prompts appear in a list sorted from newest to oldest. To clear the list just hit the "Clear List" button. 
 The prompts are stored in Local Storage so your browser will retain the list if you refresh the page or close the tab. "Clear List" button clears Local Storage as well.
 
