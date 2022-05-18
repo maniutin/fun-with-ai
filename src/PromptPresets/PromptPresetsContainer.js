@@ -1,5 +1,3 @@
-import { promptPresets } from "../constants";
-
 import PromptPresets from "./PromptPresets";
 
 export default function PromptPresetsContainer(props) {
